@@ -1,0 +1,17 @@
+def calc_time(sec):
+    list_s = []
+    h = sec / 3600
+    m = (sec % 3600) / 60
+    s = ((sec % 3600) % 60)
+    list_s.append(h)
+    list_s.append(m)
+    list_s.append(s)
+    return list_s
+# 메인코드
+myList = []
+tot_sec = 3661
+myList = calc_time(tot_sec)
+hour = myList[0]
+minute = myList[1]
+second = myList[2]
+print("%d 초 -> %d 시간, %d 분, %d 초" %(tot_sec, hour, minute, second))
